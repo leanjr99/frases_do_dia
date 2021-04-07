@@ -21,34 +21,38 @@ class _HomeState extends State<Home> {
       title: Text("Frases do dia"),
       backgroundColor: Colors.green,
       ),
-      body: Container(
-        padding: EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          border: Border.all(width:3, color: Colors.amber),
-        ),
-        child: Column(
-          children: <Widget>[
-            Image.asset("images/logo.png"),
-            Text("Clique abaixo para gerar uma frase!",
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-              fontSize: 17,
-              fontStyle: FontStyle.italic,
-              color: Colors.black,
-            ),
-            ),
-            RaisedButton(
-            child: Text("Nova Frase",
-            style: TextStyle(
-              fontSize: 17,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-            ),
-            color: Colors.green,
-              onPressed: (){},
-            )
+      body: Center(
+        child: Container(
+          padding: EdgeInsets.all(16),
+         /* decoration: BoxDecoration(
+            border: Border.all(width:3, color: Colors.amber),
+          ),*/
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Image.asset("images/logo.png"),
+              Text("Clique abaixo para gerar uma frase!",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 25,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black,
+                ),
+              ),
+              RaisedButton(
+                child: Text("Nova Frase",
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                color: Colors.green,
+                onPressed: (){},
+              )
             ],
+          ),
         ),
       ),
     );
